@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_default_min"
+    app:cardElevation="16dp"
+    app:cardCornerRadius="12dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/productImage"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/product_item_image_height"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:scaleType="centerCrop"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:background="@tools:sample/backgrounds/scenic"/>
+
+        <TextView
+            android:id="@+id/productName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_default_min"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productImage"
+            tools:text="Casaco do naruto" />
+
+        <TextView
+            android:id="@+id/productPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_default_min"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productImage"
+            tools:text="10,00" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cartIncreaseItem"
+            android:layout_width="@dimen/cart_button_width"
+            android:layout_height="@dimen/cart_button_height"
+            android:layout_margin="@dimen/margin_default_min"
+            android:text="@string/cart_increase_item_button_text"
+            app:cornerRadius="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/productName" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/cartQuantity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/cartDecreaseItem"
+            app:layout_constraintStart_toEndOf="@+id/cartIncreaseItem"
+            app:layout_constraintTop_toTopOf="@+id/cartDecreaseItem"
+            tools:text="0"
+            tools:visibility="visible" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/cartDecreaseItem"
+            android:layout_width="@dimen/cart_button_width"
+            android:layout_height="@dimen/cart_button_height"
+            android:text="@string/cart_decrease_item_button_text"
+            android:visibility="gone"
+            app:cornerRadius="8dp"
+            android:layout_marginHorizontal="4dp"
+            app:layout_constraintBottom_toBottomOf="@+id/cartIncreaseItem"
+            app:layout_constraintStart_toEndOf="@+id/cartQuantity"
+            app:layout_constraintTop_toTopOf="@+id/cartIncreaseItem"
+            tools:visibility="visible" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

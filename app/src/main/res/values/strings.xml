@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">DevelopersApp</string>
+    <string name="cart_increase_item_button_text">+</string>
+    <string name="cart_decrease_item_button_text">-</string>
+</resources>

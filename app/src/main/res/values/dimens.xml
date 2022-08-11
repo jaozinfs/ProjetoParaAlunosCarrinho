@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- List Product sizes -->
+    <dimen name="product_item_image_height">100dp</dimen>
+
+    <!-- Default sizes -->
+    <dimen name="margin_default_min">8dp</dimen>
+    <dimen name="margin_default_med">16dp</dimen>
+
+    <!-- Cart -->
+    <dimen name="cart_button_width">40dp</dimen>
+    <dimen name="cart_button_height">50dp</dimen>
+    <dimen name="fab_size">50dp</dimen>
+</resources>
